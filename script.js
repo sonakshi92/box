@@ -1,9 +1,11 @@
-let startTime = new Date().getTime();
-const box = document.getElementById("box");
+var startTime = new Date().getTime();
+var box = document.getElementById("box");
+var reaction = document.getElementById("reaction-time");
+var restartBtn = document.getElementById("restart-btn");
 
 // Generate a random hex color
 function getRandomColor() {
-  const letters = "0123456789ABCDEF";
+  var letters = "0123456789ABCDEF";
   let color = "#";
   for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
@@ -13,16 +15,16 @@ function getRandomColor() {
 
 // On box click
 function boxClicked() {
-  const endTime = new Date().getTime();
-  const reactionTime = (endTime - startTime) / 1000;
+  var endTime = new Date().getTime();
+  var reactionTime = (endTime - startTime) / 1000;
 
-  document.getElementById("reaction-time").textContent =
+  reaction.innerHTML =
     "Reaction Time: " + reactionTime + " seconds";
-  document.getElementById("reaction-time").style.display = "block";
+  reaction.style.display = "block";
 
   box.style.display = "none";
 
-  document.getElementById("restart-btn").style.display = "inline-block";
+  restartBtn.style.display = "inline-block";
 }
 
 // Restart test
@@ -30,8 +32,8 @@ function restartTest() {
   box.style.display = "block";
   box.style.backgroundColor = getRandomColor();
 
-  document.getElementById("reaction-time").style.display = "none";
-  document.getElementById("restart-btn").style.display = "none";
+  reaction.style.display = "none";
+  restartBtn.style.display = "none";
 
   startTime = new Date().getTime();
 }
