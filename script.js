@@ -18,8 +18,7 @@ function boxClicked() {
   var endTime = new Date().getTime();
   var reactionTime = (endTime - startTime) / 1000;
 
-  reaction.innerHTML =
-    "Reaction Time: " + reactionTime + " seconds";
+  reaction.innerHTML = "Reaction Time: " + reactionTime + " seconds";
   reaction.style.display = "block";
 
   box.style.display = "none";
