@@ -32,21 +32,24 @@
     animation-timing-function: linear;
   }
   
-  @keyframes shiftTheBox {
+   @keyframes shiftTheBox {
     0%, 100% {
       transform: translate(0, 0);
     }
     25% {
       transform: translate(320px, 0);
+      background-color: #af1616;
+
     }
     50% {
       transform: translate(320px, 320px);
+      background-color: aqua;
     }
     75% {
       transform: translate(0, 320px);
     }
   }
-  
+ 
   #reaction-time {
     margin-top: 2rem;
     font-size: 1.5rem;
