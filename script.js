@@ -14,9 +14,24 @@ function getRandomColor() {
   return color;
 }
 
+function move(){
+  var left;
+  var top;
+  var wh;
+  left = Math.random()*300;
+  right = Math.random() *300;
+  wh = ((Math.random() *100) +40);
+  box.style.left = left + "px";
+  box.style.top = top + "px";
+  box.style.width = wh + "px"; 
+  box.style.height = wh + "px";
+}
+move();
+
 // On box click
 function boxClicked() {
-  var endTime = new Date().getTime();
+move();
+var endTime = new Date().getTime();
   var reactionTime = (endTime - startTime) / 1000;
 
   reaction.innerHTML =
