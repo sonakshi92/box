@@ -19,6 +19,7 @@ function move(){
   var top;
   var wh;
   left = Math.random()*300;
+  top = Math.random()*300;
   right = Math.random() *300;
   wh = ((Math.random() *100) +40);
   box.style.left = left + "px";
